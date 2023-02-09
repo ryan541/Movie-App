@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/configurations/colors.dart';
 import '../controllers/action.dart';
 import 'customWidget.dart';
+import 'landingPage.dart';
 
 void main() => runApp(myMovie());
 
@@ -47,7 +48,12 @@ class Loginscreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      buttonWidget("Login", onLogin, login),
+                      buttonWidget("Login", () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const landingPage()));
+                      }, login),
                       buttonWidget("Register", onRegister, register),
                     ],
                   ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/views/landingPage.dart';
 import 'package:movie_app/views/loginscreen.dart';
+import 'package:movie_app/views/splashscreen.dart';
 
 void main() => runApp(myApplication());
 
@@ -10,7 +11,7 @@ class myApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const landingPage(),
+      home: const splashScreen(),
     );
   }
 }
