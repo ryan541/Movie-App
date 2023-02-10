@@ -33,14 +33,26 @@ class Loginscreen extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 50),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Image.asset(
                     "assets/images/popcorns.png",
                     fit: BoxFit.cover,
                   ),
                 ),
                 myTextWidget("Username", titleColor),
-                TextField(),
+                TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      labelText: "Enter Username",
+                      iconColor: Colors.cyan,
+                      prefix: Icon(Icons.offline_bolt),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: activeColor),
+                          borderRadius: BorderRadius.circular(5)),
+                    )),
+                SizedBox(
+                  height: 10,
+                ),
                 myTextWidget("Password", titleColor),
                 TextField(),
                 Padding(
@@ -57,6 +69,13 @@ class Loginscreen extends StatelessWidget {
                       buttonWidget("Register", onRegister, register),
                     ],
                   ),
+                ),
+                GestureDetector(
+                  child: Text(
+                    "Forgot Password",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onTap: () => print("Forgot Password"),
                 ),
               ],
             ),

@@ -24,48 +24,59 @@ class landingPage extends StatelessWidget {
   Widget build(BuildContext context) => DefaultTabController(
         length: 4,
         child: Scaffold(
-          appBar: AppBar(
-            elevation: 40,
-            // backgroundColor: backgroundColor,
-            flexibleSpace: Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                colors: [mainColor, subMainColor],
-                begin: Alignment.bottomRight,
-                end: Alignment.bottomLeft,
-              )),
-            ),
-            centerTitle: true,
-            title: Text("Anga Imax"),
-            leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
-            ),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.notifications_none_sharp),
+            appBar: AppBar(
+              elevation: 40,
+              // backgroundColor: backgroundColor,
+              flexibleSpace: Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  colors: [mainColor, subMainColor],
+                  begin: Alignment.bottomRight,
+                  end: Alignment.bottomLeft,
+                )),
+              ),
+              centerTitle: true,
+              title: Text("Anga Imax"),
+              leading: IconButton(
+                icon: Icon(Icons.menu),
                 onPressed: () {},
               ),
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () {},
-              ),
-            ],
+              actions: [
+                IconButton(
+                  icon: Icon(Icons.notifications_none_sharp),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: () {},
+                ),
+              ],
 
-            bottom: TabBar(indicatorColor: login, indicatorWeight: 5, tabs: [
-              Tab(icon: Icon(Icons.home), text: 'Home'),
-              Tab(icon: Icon(Icons.star), text: 'Airing'),
-              Tab(icon: Icon(Icons.play_arrow), text: 'Upcoming'),
-              Tab(icon: Icon(Icons.face), text: 'Profile'),
-            ]),
-          ),
-          body: TabBarView(children: [
-            buildPage('Home Page'),
-            buildPage('Home Page'),
-            buildPage('Home Page'),
-            buildPage('Home Page'),
-          ]),
-        ),
+              bottom: TabBar(indicatorColor: login, indicatorWeight: 5, tabs: [
+                Tab(icon: Icon(Icons.home), text: 'Home'),
+                Tab(icon: Icon(Icons.star), text: 'Airing'),
+                Tab(icon: Icon(Icons.play_arrow), text: 'Upcoming'),
+                Tab(icon: Icon(Icons.face), text: 'Profile'),
+              ]),
+            ),
+            body: Card(
+              elevation: 5,
+              color: Colors.red,
+              shadowColor: Colors.orange,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              child: Padding(
+                padding: const EdgeInsets.all(30),
+                child: Text("This is what is on Air"),
+              ),
+            )
+            // TabBarView(children: [
+            //   buildPage('Home Page'),
+            //   buildPage('Home Page'),
+            //   buildPage('Home Page'),
+            //   buildPage('Home Page'),
+            // ]),
+            ),
       );
 
   Widget buildPage(text) => Center(

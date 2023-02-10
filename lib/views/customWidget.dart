@@ -14,7 +14,7 @@ ElevatedButton buttonWidget(label, action, color, [size = 20.01]) =>
     ElevatedButton(
       onPressed: action,
       style: ElevatedButton.styleFrom(
-          backgroundColor: color, fixedSize: Size(150, 50)),
+          backgroundColor: color, fixedSize: Size(130, 50)),
       child: Text(
         label,
         style: TextStyle(

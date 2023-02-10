@@ -19,7 +19,7 @@ class _splashScreenState extends State<splashScreen> {
   @override
   void initState() {
     super.initState();
-    //_navigatetohome();
+    _navigatetohome();
   }
 
   _navigatetohome() async {
@@ -32,6 +32,7 @@ class _splashScreenState extends State<splashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
+      // backgroundColor: backgroundColor;
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
