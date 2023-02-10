@@ -1,6 +1,6 @@
 # movie_app
 
-A new Flutter project.
+This is an Android App for streaming , booking and suggesting movies to be aired on IMAX.
 
 ## Getting Started
 
